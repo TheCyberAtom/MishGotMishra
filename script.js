@@ -10,7 +10,17 @@ function toggleMenu() {
     : '<i class="fa-solid fa-bars"></i>';
 }
 
+function hideLoader() {
+  document.querySelector(".loader-container").style.display = "none";
+  document.querySelector(".content").style.display = "block";
+}
+
 document.addEventListener("DOMContentLoaded", function () {
+  // Simulate content loading delay (remove this in production)
+  setTimeout(function () {
+    hideLoader();
+  }, 3000);
+
   // Set the date we're counting down to
   const countDownDate = new Date("March 2, 2024 00:00:00").getTime();
 

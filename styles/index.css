@@ -15,6 +15,46 @@ a {
   text-decoration: none;
 }
 
+/* Loader Start */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.975);
+  z-index: 9999;
+}
+
+.loader {
+  font-size: 100px;
+  color: red;
+  animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.6);
+  }
+}
+
+.loader-container p {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+}
+/* Loader End */
+
+/* Navbar */
 .navbar {
   display: flex;
   box-sizing: border-box;
