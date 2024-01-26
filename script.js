@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Simulate content loading delay (remove this in production)
   setTimeout(function () {
     hideLoader();
-  }, 3000);
+  }, 2000);
 
   // Set the date we're counting down to
   const countDownDate = new Date("March 2, 2024 00:00:00").getTime();
