@@ -24,9 +24,11 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!hasReferrer) {
     setTimeout(function () {
       hideLoader();
-    }, 2000);
+    }, 1500);
   } else {
-    hideLoader();
+    setTimeout(function () {
+      hideLoader();
+    }, 500);
   }
 
   // Set the date we're counting down to
