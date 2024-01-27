@@ -1,5 +1,30 @@
-.bride-container {
-  background-color: black;
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
+
+.bride-img {
+  background-image: url(../assets/bride.png);
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.bride-hero {
+.bride-img h1 {
+  font-size: 10rem;
+  font-family: "Alex Brush", cursive;
+  color: #fff;
+  margin-left: 5rem;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.bride-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bride-details h1 {
+  font-size: 5rem;
+  padding: 2rem;
+  font-family: "Alex Brush", cursive;
+  color: #8f6d5c;
 }
