@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // If the countdown is over, display a message
     if (distance < 0) {
       clearInterval(x);
-      document.getElementById("timer").innerHTML = "";
+      document.getElementById("countdown").innerHTML = "";
       document.getElementById("ismarried").innerHTML =
         "Woohoo, We are Married &#10084;";
     }
