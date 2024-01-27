@@ -16,10 +16,18 @@ function hideLoader() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Simulate content loading delay (remove this in production)
-  setTimeout(function () {
+  // Check if there is a referrer
+  const hasReferrer =
+    document.referrer !== "" && document.referrer !== window.location.href;
+
+  // Display the loader only if there is no referrer
+  if (!hasReferrer) {
+    setTimeout(function () {
+      hideLoader();
+    }, 2000);
+  } else {
     hideLoader();
-  }, 2000);
+  }
 
   // Set the date we're counting down to
   const countDownDate = new Date("March 2, 2024 00:00:00").getTime();
