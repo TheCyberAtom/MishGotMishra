@@ -1,20 +1,3 @@
-function toggleMenu() {
-  let menuIcon = document.getElementById("menu-icon");
-  let menuList = document.querySelector(".menu-list");
-  let isMenu =
-    menuList.style.display === "none" || menuList.style.display === "";
-  menuList.style.display = isMenu ? "flex" : "none";
-
-  menuIcon.innerHTML = isMenu
-    ? '<i class="fa-solid fa-xmark"></i>'
-    : '<i class="fa-solid fa-bars"></i>';
-}
-
-function hideLoader() {
-  document.querySelector(".loader-container").style.display = "none";
-  document.querySelector(".content").style.display = "block";
-}
-
 document.addEventListener("DOMContentLoaded", function () {
   // Check if there is a referrer
   const hasReferrer =
@@ -30,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
       hideLoader();
     }, 500);
   }
-
   // Set the date we're counting down to
   const countDownDate = new Date("March 2, 2024 00:00:00").getTime();
 
@@ -70,3 +52,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }, 1000);
 });
+
+function hideLoader() {
+  document.querySelector(".loader-container").style.display = "none";
+  // document.querySelector(".content").style.display = "block";
+}
+
+function toggleMenu() {
+  let menuIcon = document.getElementById("menu-icon");
+  let menuList = document.querySelector(".menu-list");
+  let isMenu =
+    menuList.style.display === "none" || menuList.style.display === "";
+  menuList.style.display = isMenu ? "flex" : "none";
+
+  menuIcon.innerHTML = isMenu
+    ? '<i class="fa-solid fa-xmark"></i>'
+    : '<i class="fa-solid fa-bars"></i>';
+}
