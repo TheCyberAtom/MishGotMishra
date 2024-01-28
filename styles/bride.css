@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
 
+.bride-container {
+  background-image: linear-gradient(
+    45deg,
+    #fce4e5 0%,
+    #fbf4f2 99%,
+    #f8f7f6 100%
+  );
+  padding-bottom: 20px;
+}
+
 .bride-img {
   background-image: url(../assets/bride.png);
   width: 100%;
@@ -20,6 +30,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .bride-details h1 {
