@@ -28,17 +28,78 @@
           <li><a href="/">HOME</a></li>
           <li><a href="groom.html">GROOM</a></li>
           <li><a href="bride.html">BRIDE</a></li>
-          <li><a href="FAQ.html">FAQ</a></li>
-          <li id="cta-nav"><a href="rsvp.html">RSVP</a></li>
+          <!-- <li><a href="FAQ.html">FAQ</a></li> -->
+          <li id="cta-nav"><a href="rsvp.html">CONTACT</a></li>
         </ul>
       </div>
     </div>
 
     <!-- FAQ Page -->
     <div class="rsvp-container">
-      <h1>RSVP</h1>
+      <div class="row">
+        <h1>Contact Us</h1>
+      </div>
+      <div class="row">
+        <h4 style="text-align: center">We'd love to hear from you!</h4>
+      </div>
+      <div class="row input-container">
+        <div class="col-xs-12">
+          <div class="styled-input wide">
+            <input id="name" type="text" required />
+            <label>Name</label>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="styled-input">
+            <input id="email" type="text" required />
+            <label>Email</label>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="styled-input" style="float: right">
+            <input id="phone" type="text" required />
+            <label>Phone Number</label>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="styled-input wide">
+            <textarea id="message" required></textarea>
+            <label>Message</label>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="submit-btn" onclick="sendMail();">Send Message</div>
+        </div>
+      </div>
     </div>
 
     <script src="../scripts/script.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("yDiWAlnlIu4tEI5Ix");
+      })();
+      console.log("here");
+      function sendMail() {
+        emailjs
+          .send("service_2t9l0gv", "template_9mzaoh3", {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            message: document.getElementById("message").value,
+          })
+          .then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+              alert("Message sent successfully!");
+            },
+            function (error) {
+              console.log("FAILED...", error);
+              alert("Message failed to send. Please try again later.");
+            }
+          );
+        return false;
+      }
+    </script>
   </body>
 </html>
