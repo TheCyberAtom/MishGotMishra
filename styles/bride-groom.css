@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Orbitron:wght@400;700;900&display=swap");
 
 * {
   padding: 0;
@@ -13,7 +14,6 @@
     #fbf4f2 99%,
     #f8f7f6 100%
   );
-  padding-bottom: 20px;
 }
 
 .bride-img {
@@ -48,6 +48,7 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
+  padding-bottom: 2rem;
 }
 
 .bg-details h1 {
@@ -55,6 +56,55 @@
   padding: 2rem 2rem;
   font-family: "Alex Brush", cursive;
   color: #8f6d5c;
+}
+
+/* Bride Side People */
+.people {
+  background-color: #b9a39c;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+.people h1 {
+  font-size: 6rem;
+  padding: 2rem 2rem;
+  font-family: "Alex Brush", cursive;
+  color: #8f6d5c;
+}
+
+.grid {
+  width: 80%;
+  max-width: 1600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  row-gap: 1rem;
+  column-gap: 3rem;
+}
+.grid .person {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.grid .person img {
+  width: 100%;
+  max-width: 250px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #000;
+  margin-bottom: 1rem;
+}
+.grid .person h3 {
+  font-size: 1.4rem;
+  font-family: cursive;
 }
 
 @media screen and (max-width: 767px) {
@@ -66,4 +116,26 @@
     font-size: 2.5rem;
     padding: 2rem 10px;
   }
+}
+
+/* Footer */
+footer {
+  background-color: #bd917b;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.footer-content {
+  width: 90%;
+  padding: 1rem 3rem;
+}
+
+.footer-content h2 {
+  font-size: 3.5rem;
+  font-family: "Alex Brush", cursive;
+}
+
+.footer-content p {
+  font-size: 1.25rem;
+  margin-top: 10px;
 }

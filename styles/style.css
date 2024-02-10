@@ -17,7 +17,7 @@
 
 .card {
   background: rgba(182, 107, 49, 0.3);
-  border-radius: 16px;
+  border-radius: 6px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7.1px);
   -webkit-backdrop-filter: blur(7.1px);
@@ -42,22 +42,24 @@
   font-size: 5rem;
   font-family: "Alex Brush", cursive;
 }
-/* 
-.haldi {
+
+.haldi:hover {
   background: rgba(244, 186, 7, 0.15);
   border: 1px solid rgba(244, 186, 7, 0.2);
 }
-
-.mehendi {
+.mehendi:hover {
   background: rgba(4, 131, 12, 0.15);
   border: 1px solid rgba(4, 131, 12, 0.2);
 }
-
-.wedding,
-.tilak {
+.wedding:hover,
+.tilak:hover {
   background: rgba(184, 52, 88, 0.15);
   border: 1px solid rgba(184, 52, 88, 0.2);
-} */
+}
+.bidai:hover {
+  background: rgba(129, 52, 184, 0.15);
+  border: 1px solid rgba(129, 52, 184, 0.2);
+}
 
 @media screen and (max-width: 767px) {
   .cards {
@@ -69,4 +71,9 @@
   .card .details h2 {
     font-size: 3rem;
   }
+}
+
+/* Footer */
+footer {
+  background-color: ;
 }
