@@ -107,17 +107,6 @@
   font-family: cursive;
 }
 
-@media screen and (max-width: 767px) {
-  .bg-img h1 {
-    font-size: 6rem;
-    margin-left: 0rem;
-  }
-  .bg-details h1 {
-    font-size: 2.5rem;
-    padding: 2rem 10px;
-  }
-}
-
 /* Footer */
 footer {
   background-color: #bd917b;
@@ -126,8 +115,9 @@ footer {
 }
 
 .footer-content {
-  width: 90%;
+  width: 100%;
   padding: 1rem 3rem;
+  text-align: center;
 }
 
 .footer-content h2 {
@@ -138,4 +128,22 @@ footer {
 .footer-content p {
   font-size: 1.25rem;
   margin-top: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .bg-img h1 {
+    font-size: 6rem;
+    margin-left: 0rem;
+  }
+  .bg-details h1 {
+    font-size: 2.5rem;
+    padding: 2rem 10px;
+  }
+  .footer-content {
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  .footer-content h2 {
+    font-size: 2rem;
+  }
 }
